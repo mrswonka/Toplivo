@@ -10,7 +10,21 @@ extends - наследование методов класса HttpServlet, эт
 реализацию для всех методов интерфейса HttpServlet*/
 
 public class Chebaeva extends HttpServlet {
-    // переопределяем метод doGet, метод срабатывает при отправке запроса типа get на сервер
+    /**
+     * Основной метод класса HttpServlet, вызывается сервером для обработки GET запросов.
+     *
+     * @param req q{@link HttpServletRequest} объект, хранящий запрос,
+     *                                       сделанный клиентом к сервлету
+     *
+     * @param resp {@link HttpServletResponse} объект, хранящий ответ,
+     *                                       который сервлет отправляет на клиент
+     *
+     * @exception IOException вызывается, если обнаружена ошибка
+     *                                      ввода-вывода при обработке GET запроса
+     *
+     * @exception ServletException вызывается, если GET запрос
+     *                                      не может быть обработан
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         /*запускаем метод родительского класса, т.е. фактически
@@ -18,7 +32,21 @@ public class Chebaeva extends HttpServlet {
         а воспользовались реализацией класса-родителя*/
         super.doGet(req,resp);
     }
-    // переопределяем метод doPost, метод срабатывает при отправке запроса методов post на сервер
+    /**
+     * Основной метод класса HttpServlet, вызывается сервером для обработки POST запросов.
+     *
+     * @param req q{@link HttpServletRequest} объект, хранящий запрос,
+     *                                        сделанный клиентом к сервлету
+     *
+     * @param resp {@link HttpServletResponse} объект, хранящий ответ,
+     *                                        который сервлет отправляет на клиент
+     *
+     * @exception IOException вызывается, если обнаружена ошибка
+     *                                        ввода-вывода при обработке POST запроса
+     *
+     * @exception ServletException вызывается, если POST запрос
+     *                                        не может быть обработан
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //Получение значения, переданного с клиента, в виде строки
