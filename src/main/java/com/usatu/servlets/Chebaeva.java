@@ -65,6 +65,7 @@ try {
 //double число с плавающей точкой
         double srras = Double.parseDouble(req2Attribute);
         double rub = Double.parseDouble(req3Attribute);
+//рассчёт необходимого топлива и суммы
         double ras = (srras * km / 100);
         double sum = (ras*rub);
 
